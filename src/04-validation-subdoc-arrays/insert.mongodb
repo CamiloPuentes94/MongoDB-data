@@ -1,0 +1,10 @@
+use("platzi_store")
+
+db.products.insertOne({
+  name: "Tablet",
+  sizes: ["small", "medium", "large"],
+  category: {
+    name: "name category",
+    image: 'url'
+  }
+})
