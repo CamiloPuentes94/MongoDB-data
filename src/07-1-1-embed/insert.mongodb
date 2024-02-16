@@ -1,0 +1,18 @@
+use("platzi_store")
+
+db.users.insertOne({
+  email: "sami@gmail.com",
+  password: "Samimajo102",
+  role: "customer",
+  social_accounts: ['facebook', 'twitter'],
+  address: {
+    street: 'cr 26 ',
+    city: "Bogota",
+    zip: "250003"
+  },
+  shipping_address: {
+    street: 'cr 9 # 21-120',
+    city: "Bogota",
+    zip: "250001"
+  }
+})
