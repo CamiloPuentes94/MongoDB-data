@@ -1,0 +1,18 @@
+use("platzi_store")
+
+db.orders.updateOne(
+  { _id: ObjectId("65d381a628e0d472ded35d77") },
+  {
+    $push: {
+      items: {
+        name: "Producto 1",
+        price: 45,
+        qty: 3,
+        product_id: ObjectId("65d36943817c8ed797c90f7a")
+      }
+    },
+    $inc: {
+      total: 45 * 3
+    }
+  }
+)
